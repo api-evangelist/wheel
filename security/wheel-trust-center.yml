@@ -1,0 +1,17 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.wheel.com/security-compliance
+url: https://www.wheel.com/security-compliance
+certifications:
+- SOC 2
+- HIPAA
+notes: >-
+  Wheel publishes a Security & Compliance page stating the platform maintains
+  SOC 2 controls and is HIPAA compliant for handling protected health
+  information (PHI). No standalone trust portal (e.g. trust.wheel.com) is
+  published; the security-compliance marketing page is the public posture.
+evidence:
+- source: https://www.wheel.com/security-compliance
+  keywords:
+  - soc 2
+  - hipaa

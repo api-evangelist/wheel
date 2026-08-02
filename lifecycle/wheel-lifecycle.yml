@@ -1,0 +1,14 @@
+generated: '2026-07-21'
+method: searched
+source: https://wheelhealth.statuspage.io/
+status_page: https://wheelhealth.statuspage.io/
+versioning: null
+deprecation: null
+sla: null
+notes: >-
+  Wheel operates a public Atlassian Statuspage ("Wheel Status") for its
+  telehealth platform. No public versioning policy, deprecation policy, or SLA
+  document was found on the public site; the Wheel API is gated behind a partner
+  approval process (see https://www.wheel.com/api-terms-of-use) and its
+  reference documentation is not publicly available.
+deprecated_operations: []
