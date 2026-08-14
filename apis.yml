@@ -1,17 +1,13 @@
 aid: wheel
 name: Wheel
-description: >-
-  Wheel is a healthcare technology company providing the infrastructure for
-  modern telehealth. Its Wheel Horizon platform is a modular care-enablement
-  system that combines a nationwide clinician network, evidence-based virtual
-  care programs, and integrated clinical operations so digital health companies,
-  health plans, retailers and pharmacies, and life-sciences organizations can
-  launch and scale virtual care. Wheel also operates WheelX, an enterprise AI
-  health exchange, and Connected Services for integration. Wheel exposes a
-  partner API, governed by an API Terms of Use and gated behind an approval
-  process; the platform is HIPAA compliant and maintains SOC 2 controls. Public
-  API reference documentation, SDKs, and a developer portal are not published.
-  Wheel was surfaced as a portfolio company of CRV.
+description: Wheel is a healthcare technology company providing the infrastructure for modern telehealth.
+  Its Wheel Horizon platform is a modular care-enablement system that combines a nationwide clinician
+  network, evidence-based virtual care programs, and integrated clinical operations so digital health
+  companies, health plans, retailers and pharmacies, and life-sciences organizations can launch and scale
+  virtual care. Wheel also operates WheelX, an enterprise AI health exchange, and Connected Services for
+  integration. Wheel exposes a partner API, governed by an API Terms of Use and gated behind an approval
+  process; the platform is HIPAA compliant and maintains SOC 2 controls. Public API reference documentation,
+  SDKs, and a developer portal are not published. Wheel was surfaced as a portfolio company of CRV.
 url: https://raw.githubusercontent.com/api-evangelist/wheel/refs/heads/main/apis.yml
 accessModel:
   pricing: unknown
@@ -76,6 +72,18 @@ common:
   url: lifecycle/wheel-lifecycle.yml
 - type: WellKnown
   url: well-known/wheel-well-known.yml
+- type: DomainSecurity
+  url: security/wheel-domain-security.yml
+- type: DeveloperPortal
+  url: https://developers.wheel.com/
+- type: Lifecycle
+  url: lifecycle/wheel-lifecycle.yml
+- type: Login
+  url: https://clinicians.wheel.health
+- type: DomainSecurity
+  url: security/wheel-domain-security.yml
+- type: Lifecycle
+  url: lifecycle/wheel-lifecycle.yml
 x-enrichment:
   date: '2026-07-21'
   status: enriched
