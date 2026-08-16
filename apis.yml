@@ -29,7 +29,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-21'
+modified: '2026-08-15'
 tags:
 - Company
 - Healthcare
@@ -70,22 +70,46 @@ common:
   url: security/wheel-domain-security.yml
 - type: Lifecycle
   url: lifecycle/wheel-lifecycle.yml
-- type: WellKnown
-  url: well-known/wheel-well-known.yml
-- type: DomainSecurity
-  url: security/wheel-domain-security.yml
 - type: DeveloperPortal
+  name: Wheel developer portal (password-protected, HTTP 401)
   url: https://developers.wheel.com/
-- type: Lifecycle
-  url: lifecycle/wheel-lifecycle.yml
 - type: Login
   url: https://clinicians.wheel.health
-- type: DomainSecurity
-  url: security/wheel-domain-security.yml
-- type: Lifecycle
-  url: lifecycle/wheel-lifecycle.yml
+- type: Conformance
+  name: Compliance and standards posture
+  url: conformance/wheel-conformance.yml
+- type: Packages
+  name: Client libraries (none published)
+  url: packages/wheel-packages.yml
+- type: Plans
+  name: Pricing posture (contact sales only)
+  url: plans/wheel-plans-pricing.yml
+- type: LLMsTxt
+  url: llms/wheel-llms.txt
 x-enrichment:
-  date: '2026-07-21'
-  status: enriched
-  artifacts_added: 4
+  date: '2026-08-15'
+  status: minimal
+  artifacts_added: 5
   pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    Wheel's developer portal at developers.wheel.com is a Netlify site behind
+    site-wide password protection that answers HTTP 401 "Password Protection" to
+    every path — including /openapi.json, /llms.txt and /.well-known/* — and its
+    API Terms of Use §3 require an approved organizational agreement before
+    Access Credentials are issued, so the contract is unreadable without a
+    signed customer relationship.
+  evidence:
+  - url: https://developers.wheel.com/
+    status: 401
+  - url: https://developers.wheel.com/openapi.json
+    status: 401
+  - url: https://api.wheel.health/openapi.json
+    status: 404
+  - url: https://www.wheel.com/.well-known/api-catalog
+    status: 404
+  - url: https://wheelhealth.statuspage.io/api/v2/summary.json
+    status: 200
+  checked: '2026-08-15'
