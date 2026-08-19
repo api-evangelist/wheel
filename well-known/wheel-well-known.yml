@@ -1,17 +1,115 @@
-generated: '2026-07-21'
+generated: '2026-08-15'
 method: searched
-host: https://www.wheel.com
+source: live HTTPS probes of every Wheel-controlled host resolvable in DNS
+hosts_probed:
+- host: https://www.wheel.com
+  note: marketing site (Craft CMS on Servd); genuine 404 on every /.well-known/ path
+- host: https://developers.wheel.com
+  note: >-
+    Wheel developer portal, served from Netlify behind site-wide password
+    protection; every path including /.well-known/* answers HTTP 401
+    "Password Protection" with no login form and no public content
+- host: https://api.wheel.health
+  note: >-
+    live API host (Node/Express; GET / returns "Cannot GET /"); genuine 404 on
+    every /.well-known/ path and on every OpenAPI/Swagger candidate path
+- host: https://app.wheel.com
+  note: >-
+    SPA catch-all — returns HTTP 200 with the same 1,314-byte HTML shell for
+    EVERY /.well-known/ path. Treated as a MISS, not a hit.
+- host: https://clinicians.wheel.health
+  note: >-
+    Wheel Clinician Portal SPA catch-all — returns HTTP 200 with the same
+    1,188-byte HTML shell for EVERY /.well-known/ path. Treated as a MISS.
 documents:
 - path: /.well-known/security.txt
+  host: https://www.wheel.com
   status: 404
 - path: /.well-known/openid-configuration
+  host: https://www.wheel.com
   status: 404
 - path: /.well-known/oauth-authorization-server
+  host: https://www.wheel.com
+  status: 404
+- path: /.well-known/oauth-protected-resource
+  host: https://www.wheel.com
   status: 404
 - path: /.well-known/api-catalog
+  host: https://www.wheel.com
   status: 404
 - path: /.well-known/ai-plugin.json
+  host: https://www.wheel.com
   status: 404
+- path: /.well-known/agent-card.json
+  host: https://www.wheel.com
+  status: 404
+- path: /.well-known/agent.json
+  host: https://www.wheel.com
+  status: 404
+- path: /llms.txt
+  host: https://www.wheel.com
+  status: 404
+- path: /robots.txt
+  host: https://www.wheel.com
+  status: 200
+  note: >-
+    served, but a robots.txt is not a discovery document; it names one sitemap
+    (https://www.wheel.com/sitemaps-1-sitemap.xml) and no API surface
+- path: /.well-known/security.txt
+  host: https://developers.wheel.com
+  status: 401
+- path: /.well-known/oauth-authorization-server
+  host: https://developers.wheel.com
+  status: 401
+- path: /.well-known/oauth-protected-resource
+  host: https://developers.wheel.com
+  status: 401
+- path: /.well-known/api-catalog
+  host: https://developers.wheel.com
+  status: 401
+- path: /.well-known/agent-card.json
+  host: https://developers.wheel.com
+  status: 401
+- path: /llms.txt
+  host: https://developers.wheel.com
+  status: 401
+- path: /.well-known/security.txt
+  host: https://api.wheel.health
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  host: https://api.wheel.health
+  status: 404
+- path: /.well-known/oauth-protected-resource
+  host: https://api.wheel.health
+  status: 404
+- path: /.well-known/api-catalog
+  host: https://api.wheel.health
+  status: 404
+- path: /.well-known/agent-card.json
+  host: https://api.wheel.health
+  status: 404
+- path: /.well-known/agent.json
+  host: https://api.wheel.health
+  status: 404
+- path: /llms.txt
+  host: https://api.wheel.health
+  status: 404
+- path: /.well-known/agent-card.json
+  host: https://app.wheel.com
+  status: 200
+  hit: false
+  note: SPA shell (text/html), not an AgentCard — rejected as a false positive
+- path: /.well-known/agent-card.json
+  host: https://clinicians.wheel.health
+  status: 200
+  hit: false
+  note: SPA shell (text/html), not an AgentCard — rejected as a false positive
+result: none
 notes: >-
-  No /.well-known/ discovery documents are published on www.wheel.com. No
-  developer.wheel.com, docs.wheel.com, or api.wheel.com host resolves in DNS.
+  Wheel publishes NO /.well-known/ discovery documents on any host it controls.
+  The only 200s came from two single-page applications that answer 200 with an
+  HTML shell for every path, which is the dominant false positive on this probe
+  and is recorded here as a miss. No WellKnown, SecurityTxt, or AgentCard
+  pointer is emitted from this file — an absence recorded is not a presence.
+  The prior round wired a WellKnown pointer off an all-404 probe; that pointer
+  has been removed.

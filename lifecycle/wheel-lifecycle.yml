@@ -1,14 +1,56 @@
-generated: '2026-07-21'
+generated: '2026-08-15'
 method: searched
-source: https://wheelhealth.statuspage.io/
+source: https://www.wheel.com/api-terms-of-use
 status_page: https://wheelhealth.statuspage.io/
+status_page_components:
+- name: On-Demand API
+  status: operational
+  since: '2020-04-17'
+- name: Virtual Care Platform
+  status: operational
+  since: '2021-02-16'
+- name: Wheel Horizon Platform
+  status: operational
 versioning: null
-deprecation: null
+deprecation:
+  policy_url: null
+  sunset_header: null
+  stated_policy: >-
+    Wheel API Terms of Use §10 ("Support; Changes; Rate Limits", last updated
+    February 2026): "Wheel may provide technical support, upgrades, or
+    modifications in its discretion. Wheel may change, suspend, or discontinue
+    all or part of the Wheel API at any time." No notice period, no sunset
+    window, and no RFC 8594 Deprecation/Sunset header commitment is published.
 sla: null
-notes: >-
-  Wheel operates a public Atlassian Statuspage ("Wheel Status") for its
-  telehealth platform. No public versioning policy, deprecation policy, or SLA
-  document was found on the public site; the Wheel API is gated behind a partner
-  approval process (see https://www.wheel.com/api-terms-of-use) and its
-  reference documentation is not publicly available.
+support:
+  stated: >-
+    Discretionary — API Terms §10 states support is provided at Wheel's
+    discretion. Security issues are reported to legal@wheel.com (API Terms §9).
+  contact: https://www.wheel.com/contact-us
+termination:
+  stated: >-
+    API Terms §13 — Wheel may suspend or terminate API access for violation,
+    security risk, or if continued access is not in Wheel's or its users' best
+    interests. On termination all licenses cease and the developer must delete
+    Wheel Content and Wheel User Data.
 deprecated_operations: []
+evidence:
+- url: https://wheelhealth.statuspage.io/api/v2/summary.json
+  status: 200
+  note: >-
+    Atlassian Statuspage summary API confirms a first-party component named
+    "On-Demand API", operational, created 2020-04-17 — third-party confirmation
+    that a production Wheel API surface exists even though its contract is not
+    published.
+- url: https://www.wheel.com/api-terms-of-use
+  status: 200
+notes: >-
+  Wheel operates a public Atlassian Statuspage ("Wheel Status") that tracks an
+  "On-Demand API" component alongside the Virtual Care Platform and Wheel
+  Horizon Platform. It publishes NO versioning policy, NO deprecation policy or
+  sunset window, and NO SLA. The only lifecycle language Wheel publishes is the
+  discretionary change/suspend/discontinue clause in the API Terms of Use, which
+  is a reservation of rights rather than a deprecation policy — so no
+  Deprecation pointer is emitted. The Wheel API itself is gated behind an
+  approval process (API Terms §3) and its reference documentation sits behind a
+  password wall at https://developers.wheel.com/ (HTTP 401 on every path).

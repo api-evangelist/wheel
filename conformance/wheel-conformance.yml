@@ -1,0 +1,64 @@
+generated: '2026-08-15'
+method: searched
+source: https://www.wheel.com/security-compliance
+docs: https://www.wheel.com/security-compliance
+standards:
+- id: hipaa
+  conforms: true
+  evidence: >-
+    https://www.wheel.com/security-compliance — "With built-in HIPAA
+    compliance, SOC 2 certification, and experience powering compliant virtual
+    care in all 50 states"; "SOC 2 certified and HIPAA-compliant platform". The
+    API Terms of Use §6 requires a Business Associate Agreement before any PHI
+    moves through the Wheel API.
+- id: soc2
+  conforms: true
+  evidence: >-
+    https://www.wheel.com/security-compliance — "SOC 2 certified and
+    HIPAA-compliant platform". Type (I vs II) and audit period are not stated
+    publicly; no report or trust portal is offered for download.
+- id: hitrust
+  conforms: false
+  evidence: not claimed on the public security & compliance page
+- id: fhir-r4
+  conforms: unknown
+  evidence: >-
+    Wheel integrates lab, pharmacy, RPM and payments partners via "Connected
+    Services" (https://www.wheel.com/connected-services) and its API Terms
+    govern PHI exchange, but no FHIR conformance claim, CapabilityStatement, or
+    resource-level documentation is published on any public host.
+- id: oauth2
+  conforms: unknown
+  evidence: >-
+    API Terms §2 defines "Access Credentials" as "security keys, secrets,
+    tokens, and other credentials"; the mechanism is not published. No
+    /.well-known/oauth-authorization-server or /.well-known/openid-configuration
+    is served on any Wheel host (see well-known/wheel-well-known.yml).
+- id: rfc9457-problem-details
+  conforms: unknown
+  evidence: no public OpenAPI or error reference to derive from
+- id: rfc8594-sunset-header
+  conforms: false
+  evidence: >-
+    API Terms §10 reserves the right to "change, suspend, or discontinue all or
+    part of the Wheel API at any time" with no notice window or Sunset/
+    Deprecation header commitment
+- id: gdpr
+  conforms: unknown
+  evidence: >-
+    privacy policy published at https://www.wheel.com/privacy-policy; Wheel's
+    footprint is described as all 50 US states, and no GDPR/EU claim is made
+regulatory_context:
+  sector: US digital health / telehealth
+  regimes:
+  - HIPAA / HITECH (PHI; BAA required per API Terms §6)
+  - State telehealth practice law (Wheel publishes state-by-state guidance at
+    https://www.wheel.com/state-telehealth-regulations)
+  - Wheel Provider Group Notice of Privacy Practices
+notes: >-
+  Conformance here is a compliance-program reading, not a spec reading — Wheel
+  publishes no machine-readable contract, so nothing could be derived from
+  OpenAPI, vocabulary or tags. The two positive entries (HIPAA, SOC 2) are
+  stated by Wheel on its own public Security & Compliance page, which is what
+  the Compliance pointer in apis.yml points at. Everything else is recorded as
+  unknown rather than guessed.

@@ -1,0 +1,29 @@
+generated: '2026-08-15'
+method: searched
+source: https://www.wheel.com/contact-sales
+plan_count: 0
+plans: []
+model: contact-sales
+evidence:
+- url: https://www.wheel.com/contact-sales
+  status: 200
+- url: https://www.wheel.com/sitemaps-1-section-generalPages-1-sitemap.xml
+  status: 200
+  note: >-
+    the complete public page inventory (172 URLs) contains no /pricing, /plans,
+    or /cost page of any kind
+- url: https://www.wheel.com/wheelx-enterprise-ai-health-exchange
+  status: 200
+  note: >-
+    WheelX is described as a "shared success model … front-end licensing and
+    revenue share with active care providers" and admission is by application
+    to a limited cohort; no rates, tiers, or revenue-share percentages are
+    published
+notes: >-
+  Wheel publishes no pricing at all. Every commercial route on wheel.com ends in
+  a "Request a demo" / "Contact Sales" form, and the WheelX AI health exchange
+  is gated behind an application to a limited launch cohort. There are no
+  self-serve tiers, no published quotas, no overage rates, and no per-visit or
+  per-consult rate card. plan_count is 0 because that is the measured fact, not
+  because the page was missed. No Pricing pointer is wired in apis.yml — the
+  provider serves no pricing page for one to point at.

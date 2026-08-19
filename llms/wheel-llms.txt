@@ -1,0 +1,93 @@
+# Wheel
+
+> Wheel Health, Inc. is a US telehealth infrastructure company. Its Wheel Horizon
+> platform is a modular care-enablement system combining a nationwide clinician
+> network, evidence-based virtual care programs, and integrated clinical
+> operations, sold to digital health companies, health plans, retailers and
+> pharmacies, and pharma/life-sciences organizations. Wheel also runs WheelX, an
+> enterprise AI health exchange, and Connected Services integrations for
+> prescriptions, pharmacy delivery, labs, insurance, patient payments and remote
+> patient monitoring. A "Wheel API" exists and is governed by published API Terms
+> of Use, but its reference documentation is not public.
+
+## Agent-relevant facts
+
+- There is NO public machine-readable contract for the Wheel API: no OpenAPI,
+  no Swagger, no GraphQL SDL, no AsyncAPI, no Postman collection, no MCP server,
+  and no A2A agent card on any Wheel-controlled host (probed 2026-08-15).
+- The developer portal at https://developers.wheel.com/ is password-protected at
+  the HTTP layer and returns 401 for every path, including /.well-known/*.
+- API access requires organizational registration and Wheel approval before
+  Access Credentials (keys, secrets, tokens) are issued — Wheel API Terms §3.
+- PHI moving through the API requires a Business Associate Agreement — §6.
+- Cached Wheel Content may be retained no longer than 24 hours — §7.
+- Rate limits exist but no numbers, windows or response headers are published — §10.
+- Wheel may change, suspend, or discontinue any part of the API at any time,
+  with no notice window and no Sunset/Deprecation header commitment — §10.
+- Wheel Content may not be used to train or inform machine learning, and may not
+  be sold, leased, sublicensed or transferred to third parties — §5.
+- Scraping or crawling Wheel services by automated means other than the Wheel
+  API is prohibited — §5. Agents should treat wheel.com as read-only reference.
+
+## Legal and policy
+
+- API Terms of Use: https://www.wheel.com/api-terms-of-use
+- Terms of Use: https://www.wheel.com/terms-of-use
+- Privacy Policy: https://www.wheel.com/privacy-policy
+- Notice of Privacy Practices: https://www.wheel.com/notice-of-privacy-practices
+- Telehealth Informed Consent: https://www.wheel.com/wheel-provider-group-telehealth-informed-consent
+- Mobile Terms & Conditions: https://www.wheel.com/mobile-terms-conditions
+
+## Platform
+
+- Wheel Horizon: https://www.wheel.com/wheel-horizon-telehealth-and-virtual-care-platform
+- Care enablement platform: https://www.wheel.com/care-enablement-platform
+- Integrated clinical operations: https://www.wheel.com/integrated-clinical-operations
+- Connected Services (integrations): https://www.wheel.com/connected-services
+- Patient experience: https://www.wheel.com/patient-experience
+- Nationwide clinician network: https://www.wheel.com/companies/clinician-network
+- Evidence-based care programs: https://www.wheel.com/evidence-based-care-programs
+- Program reporting: https://www.wheel.com/program-reporting
+- Market data & intelligence: https://www.wheel.com/virtual-care-market-data-intelligence
+- WheelX enterprise AI health exchange: https://www.wheel.com/wheelx-enterprise-ai-health-exchange
+
+## Security and compliance
+
+- Security & Compliance: https://www.wheel.com/security-compliance
+  (SOC 2 certified, HIPAA-compliant platform; de-identified data only to customers)
+- Status page: https://wheelhealth.statuspage.io/
+  (tracks components: On-Demand API, Virtual Care Platform, Wheel Horizon Platform)
+- Security incident contact (per API Terms §9): legal@wheel.com
+
+## Access
+
+- Developer portal (password-protected, HTTP 401): https://developers.wheel.com/
+- Contact sales / request access: https://www.wheel.com/contact-sales
+- Clinician sign in: https://clinicians.wheel.health
+- General contact: https://www.wheel.com/contact-us
+
+## Pricing
+
+Wheel publishes no pricing, plans, tiers or rate card. All commercial routes end
+in a contact-sales form; WheelX admission is by application to a limited cohort.
+
+## API Evangelist artifacts
+
+- Profile: https://raw.githubusercontent.com/api-evangelist/wheel/refs/heads/main/apis.yml
+- Lifecycle: https://raw.githubusercontent.com/api-evangelist/wheel/refs/heads/main/lifecycle/wheel-lifecycle.yml
+- Conformance: https://raw.githubusercontent.com/api-evangelist/wheel/refs/heads/main/conformance/wheel-conformance.yml
+- Trust center: https://raw.githubusercontent.com/api-evangelist/wheel/refs/heads/main/security/wheel-trust-center.yml
+- Domain security: https://raw.githubusercontent.com/api-evangelist/wheel/refs/heads/main/security/wheel-domain-security.yml
+- Well-known probe: https://raw.githubusercontent.com/api-evangelist/wheel/refs/heads/main/well-known/wheel-well-known.yml
+- Packages: https://raw.githubusercontent.com/api-evangelist/wheel/refs/heads/main/packages/wheel-packages.yml
+- Plans: https://raw.githubusercontent.com/api-evangelist/wheel/refs/heads/main/plans/wheel-plans-pricing.yml
+- Rate limits: https://raw.githubusercontent.com/api-evangelist/wheel/refs/heads/main/rate-limits/wheel-rate-limits.yml
+
+<!--
+generated: 2026-08-15
+method: generated
+source: apis.yml + repo artifacts + www.wheel.com public pages; no /llms.txt is
+        served by Wheel on any host (www.wheel.com 404, api.wheel.health 404,
+        developers.wheel.com 401, app.wheel.com and clinicians.wheel.health
+        return SPA HTML shells rather than a document)
+-->

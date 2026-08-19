@@ -1,0 +1,32 @@
+generated: '2026-08-15'
+method: searched
+source: https://www.wheel.com/api-terms-of-use
+limit_count: 0
+limits: []
+headers: []
+status_code_on_exhaustion: null
+stated_policy: >-
+  Wheel API Terms of Use §10 ("Support; Changes; Rate Limits", last updated
+  February 2026): "Wheel may impose call limits and other restrictions based on
+  anticipated usage. Excessive usage may result in throttling, fees (if agreed),
+  suspension, or termination." §5 further prohibits developers from attempting
+  "to exceed or circumvent rate limits or other technical restrictions,
+  including by creating multiple applications for substantially similar
+  purposes."
+evidence:
+- url: https://www.wheel.com/api-terms-of-use
+  status: 200
+- url: https://developers.wheel.com/
+  status: 401
+  note: >-
+    the developer portal that would carry the numbers is password-protected at
+    the HTTP layer; every path returns 401 "Password Protection"
+notes: >-
+  Wheel asserts that rate limits exist and that they are set per-customer
+  "based on anticipated usage", but publishes no numbers, no windows, no burst
+  allowance, no response headers (X-RateLimit-*, RateLimit-*, Retry-After) and
+  no status code on exhaustion. A limit that is only discoverable after signing
+  an agreement is not a runtime signal an agent can plan against. limit_count is
+  0 because nothing quantitative is published; no RateLimits pointer is wired in
+  apis.yml, since asserting one would credit Wheel with a published limit
+  surface it does not have.

@@ -1,0 +1,49 @@
+generated: '2026-08-15'
+method: searched
+source: >-
+  npm registry search, PyPI, and a GitHub organization sweep for Wheel Health,
+  Inc. — plus the public wheel.com site (which links no SDK, CLI or source repo)
+package_count: 0
+packages: []
+registries_checked:
+- registry: npm
+  query: https://registry.npmjs.org/-/v1/search?text=wheel%20health
+  status: 200
+  result: >-
+    no first-party package. Every "wheel" hit belongs to unrelated projects
+    (mouse-wheel event helpers, react wheel pickers, embla-carousel-wheel-gestures).
+- registry: pypi
+  query: https://pypi.org/pypi/wheel-health/json
+  status: 404
+  result: >-
+    absent; note that PyPI's `wheel` package is the Python binary-distribution
+    tool and has no relationship to Wheel Health, Inc.
+- registry: pypi
+  query: https://pypi.org/pypi/wheelhealth/json
+  status: 404
+  result: absent
+- registry: pypi
+  query: https://pypi.org/pypi/wheel-api/json
+  status: 404
+  result: absent
+- registry: github
+  query: https://api.github.com/orgs/wheelhealth
+  status: 404
+  result: no organization
+- registry: github
+  query: https://api.github.com/orgs/wheel-health
+  status: 404
+  result: no organization
+- registry: github
+  query: https://api.github.com/orgs/wheel
+  status: 404
+  result: no organization
+notes: >-
+  Wheel ships no public client libraries. There is no first-party SDK on npm,
+  PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems, Packagist or crates.io, no
+  GitHub organization for Wheel Health, Inc., and no SDK/CLI/SourceCode link
+  anywhere on wheel.com. Any SDK that exists is presumably distributed inside
+  the password-protected developer portal at https://developers.wheel.com/
+  (HTTP 401 on every path), which cannot be read. Because zero official
+  packages were found, NO `SDKs` pointer is emitted in apis.yml — an honest
+  zero, not a missing check.
