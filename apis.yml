@@ -9,6 +9,17 @@ description: Wheel is a healthcare technology company providing the infrastructu
   process; the platform is HIPAA compliant and maintains SOC 2 controls. Public API reference documentation,
   SDKs, and a developer portal are not published. Wheel was surfaced as a portfolio company of CRV.
 url: https://raw.githubusercontent.com/api-evangelist/wheel/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
