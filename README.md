@@ -64,6 +64,98 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Wheel is a company surfaced as a portfolio company of crv and added to the API Evangelist network as a stub for enrichment. Sector: healthcare. This profile is a lead awaiting the enrichment pipeline.
+Wheel is a healthcare technology company providing the infrastructure for modern telehealth. Its Wheel Horizon platform is a modular care-enablement system that combines a nationwide clinician network, evidence-based virtual care programs, and integrated clinical operations so digital health companies, health plans, retailers and pharmacies, and life-sciences organizations can launch and scale virtual care. Wheel also operates WheelX, an enterprise AI health exchange, and Connected Services for integration. Wheel exposes a partner API, governed by an API Terms of Use and gated behind an approval process; the platform is HIPAA compliant and maintains SOC 2 controls. Public API reference documentation, SDKs, and a developer portal are not published. Wheel was surfaced as a portfolio company of CRV.
 
-Backed by: crv — https://www.wheel.com/
+**Areas:** Company · Healthcare · Telehealth · Virtual Care · Digital Health · Clinician Network · Care Enablement · HIPAA
+
+## Wheel on APIs.io
+
+Everything profiled for Wheel is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/wheel/](https://apis.io/providers/wheel/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Wheel Domain Security](https://apis.io/security/wheel/wheel-domain-security/)
+- [Wheel Trust Center](https://apis.io/security/wheel/wheel-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Wheel Plans Pricing](https://apis.io/plans/wheel/wheel-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Wheel Rate Limits](https://apis.io/rate-limits/wheel/wheel-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.wheel.com/)
+- [Support](https://www.wheel.com/contact-us)
+- [Blog](https://www.wheel.com/blog)
+- [Compliance](https://www.wheel.com/security-compliance)
+- [Terms of service](https://www.wheel.com/terms-of-use)
+- [Privacy policy](https://www.wheel.com/privacy-policy)
+- [Status](https://wheelhealth.statuspage.io/)
+
+## API Evangelist rating
+
+**Kin Score 22.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 43.4 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.8** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/wheel/](https://apis.io/providers/wheel/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Wheel: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/wheel/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
